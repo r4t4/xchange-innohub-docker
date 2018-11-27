@@ -1,0 +1,25 @@
+version: "3.3"
+
+services:
+  webserver:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - appserver
+    container_name: web-three
+
+  appserver:
+    build: ./app
+    image: app:simple
+    ports:
+      - "3000"
+    links:
+      - redis
+    container_name: app-three
+
+  redis:
+    image: redis
+    container_name: db-three

@@ -1,0 +1,16 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Claudio Maubert <claudio@avanttia.com>",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "2.6.2",
+    "moment": "2.22.2",
+    "redis": "2.8.0"
+  }
+}
